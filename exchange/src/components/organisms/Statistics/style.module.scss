@@ -1,0 +1,64 @@
+@import "../../../assets/styles/styles.scss";
+.content {
+	margin: 0 0 2rem 0;
+	.income {
+		display: flex;
+		margin: 0 0 1rem 0;
+		input::-moz-range-progress {
+			height: 8px;
+			background-color: $Green;
+			border-radius: 30px;
+		}
+		.percent {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			color: $Green;
+			position: relative;
+			right: -0.5rem;
+			top: -0.35rem;
+		}
+	}
+	.outcome {
+		display: flex;
+		input::-moz-range-progress {
+			height: 8px;
+			background-color: $Red;
+			border-radius: 30px;
+		}
+		.percent {
+			font-family: "Montserrat", sans-serif;
+			font-weight: 600;
+			color: $Red;
+			position: relative;
+			right: -0.5rem;
+			top: -0.35rem;
+		}
+	}
+	.statistics {
+		display: flex;
+		flex-direction: column;
+		span {
+			margin: 0.3rem 0 0 0;
+		}
+		input {
+			display: block;
+			width: 300px;
+			height: 8px;
+			background-color: #f5f5f5;
+			-webkit-appearance: none;
+			outline: none;
+			border-radius: 30px;
+		}
+		input::-moz-range-thumb {
+			-moz-appearance: none;
+			height: 0;
+			width: 0;
+		}
+		input::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			height: 0;
+			width: 0;
+		}
+	}
+}
+

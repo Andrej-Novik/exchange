@@ -1,0 +1,14 @@
+.wrapper {
+	display: flex;
+	height: 100vh;
+	.page	{
+		margin: 0 auto;
+		flex: 1 1 auto;
+		display: flex;
+		background-color: #ffffff;
+		.main {
+			flex: 1 1 auto;
+			padding: 2rem;
+		}
+	}
+}
