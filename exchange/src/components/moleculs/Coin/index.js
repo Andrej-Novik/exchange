@@ -1,12 +1,11 @@
 import styles from "./style.module.scss"
-import bitcoin from "../../../assets/images/coinsIcons/btc.png"
 
-const Coin = ({}) => {
+const Coin = ({ amount, img, price }) => {
 	return (
 		<div className={styles.coin}>
-			<img src={ bitcoin } alt="coin" />
-			<div className={styles.amount}></div>
-			<div className={styles.dollars}>$ </div>
+			<img src={ img } alt="coin" />
+			<div className={styles.amount}>{amount}</div>
+			<div className={styles.dollars}>$ {price*amount} </div>
 		</div>
 	)
 }

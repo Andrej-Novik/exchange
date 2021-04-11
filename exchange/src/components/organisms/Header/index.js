@@ -3,7 +3,7 @@ import mail from "../../../assets/images/headerIcons/mail.svg"
 import bell from "../../../assets/images/headerIcons/bell.svg"
 import avatar from "../../../assets/images/headerIcons/avatar.png"
 
-const Header = ({}) => {
+const Header = () => {
 	return (
 		<header className={styles.pageHeader}>
 			<h1 className={styles.pageTitle}>WebDad crypto exchange</h1>

@@ -1,16 +1,15 @@
 import styles from "./style.module.scss"
-import bitcoin from "../../../assets/images/coinsIcons/btc.png"
 
-const Transaction = ({}) =>  {
+const Transaction = ({transaction}) =>  {
 	return (
 		<div className={styles.transaction}>
 			<div className={styles.name}>
-				<img src={ bitcoin } alt="img" />
-				<span>Bitcoin</span>
+				<img src={ transaction.img } alt="img" />
+				<span>{transaction.name}</span>
 			</div>
-			<span className={styles.date}>07.03.2021</span>
-			<span className={styles.time}>12:00</span>
-			<span className={styles.amount}>2 BTS</span>
+			<span className={styles.date}>{transaction.date}</span>
+			<span className={styles.time}>{transaction.time}</span>
+			<span className={ transaction.buy ? styles.buy : styles.sell}>{transaction.amount} {transaction.abbreviation}</span>
 		</div>
 	)
 }

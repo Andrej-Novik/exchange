@@ -5,48 +5,6 @@ body {
 	font-family: "Poppins", sans-serif;
 	overflow: hidden;
 }
-.blockHeader {
-	display: flex;
-	justify-content: space-between;
-	margin: 0 0 1rem 0;
-	h2 {
-		font-size: 1.25rem;
-		line-height: 1.25rem;
-		cursor: pointer;
-		font-weight: 600;
-	}
-	.link {
-		font-size: 15px;
-		letter-spacing: 1.5px;
-		line-height: 22.5px;
-		position: relative;
-		margin: 0 0.7rem 0 0;
-		color: inherit;
-		&:hover {
-			color: $Green;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			top: 10px;
-			right: -8px;
-			width: 2px;
-			height: 8px;
-			background-color: $Green;
-			transform: rotate(45deg);
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			top: 6px;
-			right: -8px;
-			width: 2px;
-			height: 8px;
-			background-color: $Green;
-			transform: rotate(-45deg);
-		}
-	}
-}
 .text {
 	color: $Grey;
 	line-height: 1rem;

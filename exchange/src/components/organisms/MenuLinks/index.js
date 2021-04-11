@@ -1,7 +1,7 @@
-import styles from "./style.module.scss"
 import { Link } from "react-router-dom"
+import styles from "./style.module.scss"
 
-const MenuLinks = ({}) => {
+const MenuLinks = () => {
 	return (
 		<nav className={styles.menuLinks}>
 			<Link to="" className={styles.menuLink}>

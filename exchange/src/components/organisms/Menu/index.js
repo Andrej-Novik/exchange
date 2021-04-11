@@ -1,8 +1,8 @@
-import styles from "./style.module.scss"
 import MenuLinks from "../MenuLinks"
+import styles from "./style.module.scss"
 import logo from "../../../assets/images/pageLogo.png"
 
-const Menu = ({}) => {
+const Menu = () => {
 	return (
 		<div className={styles.pageMenu}>
 			<div className={styles.menuContent}>

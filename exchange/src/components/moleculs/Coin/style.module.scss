@@ -17,14 +17,18 @@
 	.amount {
 		font-family: "Montserrat", sans-serif;
 		font-weight: 500;
-		font-size: 15px;
-		margin: 0 0 0.3rem 0;
+		font-size: 1.2rem;
+		margin: 0 0 0.6rem 0;
 	}
 	.dollars {
 		color: $Grey;
 		font-family: "Montserrat", sans-serif;
-		font-size: 14px;
+		font-size: 15px;
+		line-height: 1;
 		margin: 0 0 2rem 0;
+		@media(max-width: 1250px) {
+			margin: 0 0 1rem 0;
+		}
 	}
 	img {
 		border-radius: 50%;

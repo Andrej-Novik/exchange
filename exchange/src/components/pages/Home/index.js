@@ -1,11 +1,11 @@
-import styles from "./style.module.scss"
-import Wallet from "../../organisms/Wallet"
 import History from "../../organisms/History"
 import Coins from "../../organisms/Coins"
 import Statistics from "../../organisms/Statistics"
 import Dispatch from "../../organisms/Dispatch"
+import styles from "./style.module.scss"
+import Wallet from "../../organisms/Wallet"
 
-const Home = ({}) => {
+const Home = () => {
 	return (
 		<div className={styles.content}>
 			<div className={styles.column}>

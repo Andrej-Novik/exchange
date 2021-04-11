@@ -1,11 +1,10 @@
 import styles from "./style.module.scss"
-import person from "../../../assets/images/headerIcons/avatar.png"
 
-const Dispatch = () => {
+const Dispatch = ({person}) => {
 	return (
 		<div className={styles.person}>
-			<img src={ person } alt="ava" />
-			<span className="text">{ }</span>
+			<img src={ person.ava } alt="ava" />
+			<span className="text">{ person.name }</span>
 		</div>
 	)
 }

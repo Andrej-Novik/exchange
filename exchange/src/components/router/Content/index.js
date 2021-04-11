@@ -1,8 +1,8 @@
 import { Route, Switch } from "react-router-dom"
-import styles from "./style.module.scss"
 import Home from "../../pages/Home"
+import styles from "./style.module.scss"
 
-const Content = ({}) => {
+const Content = () => {
 	return (
 		<div className={styles.content}>
 			<Switch>
