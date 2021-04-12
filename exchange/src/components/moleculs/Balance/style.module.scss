@@ -1,39 +1,39 @@
 @import "../../../assets/styles/styles.scss";
 .balance {
-	word-wrap: none;
-	.current {
-		margin: 0 0 1rem 0;
-		span {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 1.5rem;
-			line-height: 1.6rem;
-			font-weight: 500;
-			@media(max-width: 1250px) {
-			font-size: 20px;
-			}
-		}
-	}
-	.income {
-		margin: 0 0 1rem 0;
-		span {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 18px;
-			color: $Green;
-			margin: 0;
-			@media(max-width: 1250px) {
-				font-size: 16px;
-			}
-		}
-	}
-	.outcome {
-		span {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 18px;
-			color: $Red;
-			margin: 0;
-			@media(max-width: 1250px) {
-				font-size: 16px;
-			}
-		}
-	}
+  word-wrap: none;
+  .current {
+    margin: 0 0 1rem 0;
+    span {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      font-weight: 500;
+      @media (max-width: 1250px) {
+        font-size: 20px;
+      }
+    }
+  }
+  .income {
+    margin: 0 0 1rem 0;
+    span {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      color: $Green;
+      margin: 0;
+      @media (max-width: 1250px) {
+        font-size: 16px;
+      }
+    }
+  }
+  .outcome {
+    span {
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      color: $Red;
+      margin: 0;
+      @media (max-width: 1250px) {
+        font-size: 16px;
+      }
+    }
+  }
 }
