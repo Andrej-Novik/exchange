@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-const BlockHeader = ({ title, text, path }) => {
+const BlockHeader = ({ title, link, path }) => {
   return (
     <div className={styles.header}>
       <h2 className={styles.title}>{title}</h2>
-      {text && (
+      {link && (
         <Link to={path} className={styles.link}>
-          {text}
+          {link}
         </Link>
       )}
     </div>

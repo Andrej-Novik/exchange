@@ -1,8 +1,9 @@
 import Person from "../../moleculs/Person";
 import BlockHeader from "../../moleculs/BlockHeader";
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
+import AddNewUserModal from "../AddNewUserModal";
 
-const Dispatch = ({ people }) => {
+const Dispatch = ({ people, isOpen, onOpen, onClose }) => {
   return (
     <div className={styles.content}>
       <BlockHeader title={"New transaction"} />
@@ -10,12 +11,15 @@ const Dispatch = ({ people }) => {
         {people.slice(0, 6).map((person) => {
           return <Person person={person} key={person.id} />;
         })}
-        <div className={styles.add}>+</div>
+        <div onClick={onOpen} className={styles.add}>
+          +
+        </div>
       </div>
-      <form>
-        <input type="text" placeholder="0" />
-        <button className={styles.send}>Send the transfer</button>
+      <form className={styles.send}>
+        <input className={styles.amount} type="text" placeholder="0" />
+        <button className={styles.button}>Send the transfer</button>
       </form>
+      <AddNewUserModal isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

@@ -7,7 +7,6 @@ const Content = () => {
     <div className={styles.content}>
       <Switch>
         <Route path="/" exact render={() => <Home />} />
-        <Route path="/coins" exact render={() => <div>Coins</div>} />
       </Switch>
     </div>
   );

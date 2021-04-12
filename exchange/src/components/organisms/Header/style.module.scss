@@ -26,18 +26,4 @@
       }
     }
   }
-  .profile {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin: -0.25rem 0rem 0 0;
-    .profilePhoto {
-      width: 2rem;
-      height: 2rem;
-    }
-    span {
-      max-width: 80px;
-      margin: 0 0 0 0.5rem;
-    }
-  }
 }
