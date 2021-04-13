@@ -7,7 +7,7 @@ const GeneralLayout = ({ menu, content, header }) => {
         {menu}
         <div className={styles.main}>
           {header}
-          {content}
+					{content}
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const App = () => {
       <GeneralLayout
         menu={<Menu />}
         content={<Content />}
-        header={<Header />}
+				header={<Header />}
       />
     </BrowserRouter>
   );
