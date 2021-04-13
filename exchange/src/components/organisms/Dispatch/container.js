@@ -7,7 +7,7 @@ const DispatchContainer = () => {
   const people = useSelector((state) => state.people.people);
   const isOpen = useSelector((state) => state.people.isModalOpen);
 
-  const onOpen = () => {
+	const onOpen = () => {
     dispatch(openModal());
   };
   const onClose = () => {

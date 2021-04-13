@@ -13,7 +13,7 @@ const Home = () => {
         <History />
       </div>
       <div className={styles.column}>
-        <Coins />
+				<Coins coinsAmount={3} header={true} padding={ true }/>
         <Statistics />
         <Dispatch />
       </div>

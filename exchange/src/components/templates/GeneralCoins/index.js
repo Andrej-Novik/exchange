@@ -1,12 +1,12 @@
 import BlockHeader from "../../moleculs/BlockHeader";
 import Coin from "../../moleculs/Coin";
 
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
 
-const Coins = ({ coins, coinsAmount, header, padding }) => {
+const Coins = ({ coins, coinsAmount }) => {
   return (
-    <div className={styles.content + " " + (padding && styles.padding)}>
-			{header && <BlockHeader link={"View all"} path={"/coins"} title={"Coins"} />}
+    <div className={styles.content}>
+      <BlockHeader link={"View all"} path={"/coins"} title={"Coins"} />
       <div className={styles.coins}>
         {coins.slice(0, coinsAmount).map((coin) => {
           return (
