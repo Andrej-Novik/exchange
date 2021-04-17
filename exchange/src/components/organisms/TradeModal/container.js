@@ -9,7 +9,8 @@ const TradeModalContainer = () => {
   const isOpen = useSelector((state) => state.coins.isBuyModalOpen);
   const enteredAmount = useSelector((state) => state.coins.enteredAmount);
   const isBuy = useSelector((state) => state.coins.isBuy);
-  const chosenCoin = useSelector((state) => state.coins.chosenCoin);
+	const chosenCoin = useSelector((state) => state.coins.chosenCoin);
+	const currentBalance =  useSelector((state) => state.balance.current);
 
   const onClose = () => {
     dispatch(closeModal());
@@ -25,7 +26,8 @@ const TradeModalContainer = () => {
       isOpen={isOpen}
       enteredAmount={enteredAmount}
       isBuy={isBuy}
-      chosenCoin={chosenCoin}
+			chosenCoin={chosenCoin}
+			currentBalance={currentBalance}
       onClose={onClose}
       onTrade={onTrade}
     />

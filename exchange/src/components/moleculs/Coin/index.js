@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import styles from "./style.module.scss";
 
 const Coin = ({ amount, img, price }) => {
   return (
-    <div className={styles.coin}>
+    <Link to="/trade" className={styles.coin}>
       <div className={styles.content}>
         <img src={img} alt="coin" />
         <div className={styles.amount}>{amount}</div>
@@ -13,7 +14,7 @@ const Coin = ({ amount, img, price }) => {
             : (price * amount).toFixed(1)}{" "}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -2,6 +2,7 @@ import Balance from "../../organisms/Balance";
 import Coins from "../../organisms/Coins";
 import History from "../../organisms/History"
 import Statistics from "../../organisms/Statistics";
+import Dispatch from "../../organisms/Dispatch";
 import styles from "./styles.module.scss";
 
 const HistoryPage = () => {
@@ -14,6 +15,7 @@ const HistoryPage = () => {
       <div className={styles.column}>
 				<Coins />
 				<Statistics />
+				<Dispatch />
       </div>
     </div>
   );

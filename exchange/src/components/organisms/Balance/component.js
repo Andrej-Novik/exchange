@@ -9,15 +9,15 @@ const Balance = ({
   return (
     <div className={styles.balance + " " + (onlyBalance && styles.onlyBalance)}>
       <div className={styles.current}>
-        <span>{currentBalance}</span>
+        <span>{currentBalance.toFixed(1)}</span>
         <p className="text">Current balance</p>
       </div>
       <div className={styles.income}>
-        <span>$ {incomeBalance}</span>
+        <span>$ {incomeBalance.toFixed(1)}</span>
         <p className="text">Income</p>
       </div>
       <div className={styles.outcome}>
-        <span>$ {outcomeBalance}</span>
+        <span>$ {outcomeBalance.toFixed(1)}</span>
         <p className="text">Outcome</p>
       </div>
     </div>

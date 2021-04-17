@@ -1,3 +1,4 @@
+import Dispatch from "../../organisms/Dispatch";
 import Balance from "../../organisms/Balance";
 import BuyCoins from "../../organisms/BuyCoins";
 import Coins from "../../organisms/Coins";
@@ -13,7 +14,8 @@ const CoinsPage = () => {
       </div>
       <div className={styles.column}>
         <Coins />
-        <Statistics />
+				<Statistics />
+				<Dispatch />
       </div>
     </div>
   );

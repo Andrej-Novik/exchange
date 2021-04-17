@@ -5,7 +5,8 @@ const TradeModal = ({
   isOpen,
   isBuy,
   enteredAmount,
-  chosenCoin,
+	chosenCoin,
+	currentBalance,
   onClose,
   onTrade,
 }) => {
@@ -31,7 +32,7 @@ const TradeModal = ({
           />
           {isBuy ? (
             <button
-              disabled={newEnteredAmount === enteredAmount}
+              disabled={newEnteredAmount === enteredAmount || newEnteredAmount * chosenCoin.price > currentBalance }
               className={styles.buy}
               onClick={() =>
                 onTrade(
@@ -49,7 +50,7 @@ const TradeModal = ({
             </button>
           ) : (
             <button
-              disabled={newEnteredAmount === enteredAmount}
+              disabled={newEnteredAmount === enteredAmount || newEnteredAmount > chosenCoin.amount}
               className={styles.sell}
               onClick={() =>
                 onTrade(
