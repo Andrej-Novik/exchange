@@ -1,8 +1,13 @@
-import styles from "./style.module.scss";
+import styles from "./styles.module.scss";
 
-const Balance = ({ currentBalance, incomeBalance, outcomeBalance }) => {
+const Balance = ({
+  currentBalance,
+  incomeBalance,
+	outcomeBalance,
+	onlyBalance
+}) => {
   return (
-    <div className={styles.balance}>
+    <div className={styles.balance + " " + (onlyBalance && styles.onlyBalance)}>
       <div className={styles.current}>
         <span>{currentBalance}</span>
         <p className="text">Current balance</p>
