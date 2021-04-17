@@ -7,8 +7,8 @@ const MenuLinks = () => {
       <Link to="" className={styles.menuLink}>
         Home
       </Link>
-      <Link to="coins" className={styles.menuLink}>
-        Coins
+      <Link to="trade" className={styles.menuLink}>
+        Trade
       </Link>
       <Link to="wallet" className={styles.menuLink}>
         Wallet

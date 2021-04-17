@@ -1,24 +1,25 @@
 import BlockHeader from "../../moleculs/BlockHeader";
 import BuyCoin from "../../moleculs/BuyCoin";
+import TradeModal from "../TradeModal";
 import styles from "./styles.module.scss";
 
-const BuyCoins = ({ coins }) => {
+const BuyCoins = ({ coins, buttons, onOpen }) => {
   return (
     <div className={styles.buy}>
-      <BlockHeader title={"Buy or sell your cois"} />
+      <BlockHeader title={"Trade "} />
       <div className={styles.coins}>
         {coins.map((coin) => {
           return (
             <BuyCoin
-              name={coin.name}
-              abb={coin.abbreviation}
-              amount={coin.amount}
-              price={coin.price}
-							img={coin.img}
+							coin={coin}
+							buttons={buttons}
+							onOpen={onOpen}
+							key={coin.id}
             />
           );
         })}
-      </div>
+			</div>
+			<TradeModal />
     </div>
   );
 };

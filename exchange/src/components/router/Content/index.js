@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Home from "../../pages/Home";
-import Coins from "../../pages/Coins";
+import CoinsPage from "../../pages/CoinsPage";
 import styles from "./style.module.scss";
 
 const Content = () => {
@@ -8,7 +8,7 @@ const Content = () => {
     <div className={styles.content}>
       <Switch>
 				<Route path="/" exact render={() => <Home />} />
-				<Route path="/coins" exact render={() => <Coins />} />
+				<Route path="/trade" exact render={() => <CoinsPage />} />
       </Switch>
     </div>
   );

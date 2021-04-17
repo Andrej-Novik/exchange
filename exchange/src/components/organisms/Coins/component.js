@@ -6,7 +6,7 @@ import styles from "./style.module.scss";
 const Coins = ({ coins, coinsAmount, header, padding }) => {
   return (
     <div className={styles.content + " " + (padding && styles.padding)}>
-			{header && <BlockHeader link={"View all"} path={"/coins"} title={"Coins"} />}
+			{header && <BlockHeader link={"View all"} path={"/trade"} title={"Coins"} />}
       <div className={styles.coins}>
         {coins.slice(0, coinsAmount).map((coin) => {
           return (

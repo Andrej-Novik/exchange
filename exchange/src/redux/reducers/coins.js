@@ -1,4 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
+import {
+  OPEN_MODAL_SELL,
+  OPEN_MODAL_BUY,
+  CLOSE_MODAL,
+  BUY_COINS,
+  SELL_COINS,
+} from "../actionTypes/coins";
 import bitcoin from "../../assets/images/coinsIcons/btc.png";
 import ethereum from "../../assets/images/coinsIcons/eth.png";
 import litecoin from "../../assets/images/coinsIcons/lit.png";
@@ -6,6 +13,26 @@ import ripple from "../../assets/images/coinsIcons/xrp.jpg";
 import bitcoinCash from "../../assets/images/coinsIcons/bch.jpg";
 
 const initialState = {
+  isBuyModalOpen: false,
+  enteredAmount: "",
+  chosenCoin: {},
+  isBuy: true,
+  buttons: [
+    {
+      id: 1,
+      text: {
+        big: "sell",
+        small: "-",
+      },
+    },
+    {
+      id: 2,
+      text: {
+        big: "buy",
+        small: "+",
+      },
+    },
+  ],
   coins: [
     {
       id: uuidv4(),
@@ -21,7 +48,7 @@ const initialState = {
       name: "Ethereum",
       abbreviation: "ETH",
       amount: 2,
-      price: 1500.33,
+      price: 1500.0,
       percent: 7.48,
       img: ethereum,
     },
@@ -57,6 +84,62 @@ const initialState = {
 
 const balance = (state = initialState, action) => {
   switch (action.type) {
+    case OPEN_MODAL_BUY: {
+      return {
+        ...state,
+        chosenCoin: state.coins.find((coin) => coin.id === action.coinId),
+        isBuyModalOpen: true,
+        isBuy: true,
+      };
+    }
+    case OPEN_MODAL_SELL: {
+      return {
+        ...state,
+        chosenCoin: state.coins.find((coin) => coin.id === action.coinId),
+        isBuyModalOpen: true,
+        isBuy: false,
+      };
+    }
+    case CLOSE_MODAL: {
+      return {
+        ...state,
+        isBuyModalOpen: false,
+        enteredAmount: "",
+        chosenCoin: {},
+      };
+    }
+    case BUY_COINS: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.id === action.coinId
+            ? {
+                ...coin,
+                amount: parseInt(coin.amount) + parseInt(action.amount),
+              }
+            : coin
+        ),
+        isBuyModalOpen: false,
+        enteredAmount: "",
+        chosenCoin: {},
+      };
+    }
+    case SELL_COINS: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.id === action.coinId
+            ? {
+                ...coin,
+                amount: parseInt(coin.amount) - parseInt(action.amount),
+              }
+            : coin
+        ),
+        isBuyModalOpen: false,
+        enteredAmount: "",
+        chosenCoin: {},
+      };
+    }
     default:
       return state;
   }
