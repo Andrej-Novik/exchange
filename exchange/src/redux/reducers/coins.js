@@ -115,7 +115,7 @@ const balance = (state = initialState, action) => {
           coin.id === action.coinId
             ? {
                 ...coin,
-                amount: parseInt(coin.amount) + parseInt(action.amount),
+                amount: Number(coin.amount) + Number(action.amount),
               }
             : coin
         ),
@@ -131,7 +131,7 @@ const balance = (state = initialState, action) => {
           coin.id === action.coinId
             ? {
                 ...coin,
-                amount: parseInt(coin.amount) - parseInt(action.amount),
+                amount: Number(coin.amount) - Number(action.amount),
               }
             : coin
         ),
