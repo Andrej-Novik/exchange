@@ -4,6 +4,7 @@ import ethereum from "../../assets/images/coinsIcons/eth.png";
 import litecoin from "../../assets/images/coinsIcons/lit.png";
 import ripple from "../../assets/images/coinsIcons/xrp.jpg";
 import bitcoinCash from "../../assets/images/coinsIcons/bch.jpg";
+import { NEW_TRANSACTION } from "../actionTypes/transactions";
 
 const initialState = {
   transactions: [
@@ -15,7 +16,7 @@ const initialState = {
       date: "21.04.2021",
       time: "13:59",
       img: litecoin,
-      buy: true,
+      isBuy: true,
     },
     {
       id: uuidv4(),
@@ -25,7 +26,7 @@ const initialState = {
       date: "10.04.2021",
       time: "23:13",
       img: ripple,
-      buy: false,
+      isBuy: false,
     },
     {
       id: uuidv4(),
@@ -35,7 +36,7 @@ const initialState = {
       date: "07.03.2021",
       time: "12:00",
       img: bitcoin,
-      buy: true,
+      isBuy: true,
     },
     {
       id: uuidv4(),
@@ -45,7 +46,7 @@ const initialState = {
       date: "10.02.2021",
       time: "12:13",
       img: ethereum,
-      buy: true,
+      isBuy: true,
     },
     {
       id: uuidv4(),
@@ -55,13 +56,32 @@ const initialState = {
       date: "2.01.2021",
       time: "20:15",
       img: bitcoinCash,
-      buy: false,
+      isBuy: false,
     },
   ],
 };
 
 const balance = (state = initialState, action) => {
   switch (action.type) {
+		case NEW_TRANSACTION: {
+			let date = new Date();
+      return {
+        ...state,
+        transactions: [
+          ...state.transactions,
+          {
+            id: uuidv4(),
+            name: action.name,
+            abbreviation: action.abbreviation,
+						amount: action.amount,
+						date: date.toLocaleDateString(),
+						time: date.toLocaleTimeString(),
+						img: action.img,
+						isBuy: action.isBuy
+          },
+        ],
+      };
+    }
     default:
       return state;
   }

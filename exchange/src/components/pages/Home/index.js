@@ -10,11 +10,11 @@ const Home = () => {
     <div className={styles.content}>
       <div className={styles.column}>
         <Wallet />
-        <History />
+				<History transactionsAmount={5} header={true}/>
       </div>
       <div className={styles.column}>
 				<Coins coinsAmount={3} header={true} padding={ true }/>
-        <Statistics />
+				<Statistics/>
         <Dispatch />
       </div>
     </div>

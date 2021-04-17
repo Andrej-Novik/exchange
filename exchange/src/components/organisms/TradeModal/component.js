@@ -38,7 +38,10 @@ const TradeModal = ({
                   newEnteredAmount,
                   chosenCoin.id,
                   chosenCoin.price,
-                  isBuy
+                  isBuy,
+                  chosenCoin.name,
+                  chosenCoin.abbreviation,
+                  chosenCoin.img
                 )
               }
             >
@@ -53,7 +56,10 @@ const TradeModal = ({
                   newEnteredAmount,
                   chosenCoin.id,
                   chosenCoin.price,
-                  isBuy
+                  isBuy,
+                  chosenCoin.name,
+                  chosenCoin.abbreviation,
+                  chosenCoin.img
                 )
               }
             >
