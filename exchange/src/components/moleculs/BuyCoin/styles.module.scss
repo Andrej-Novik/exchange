@@ -55,41 +55,42 @@
       width: 11rem;
       @media (max-width: 1250px) {
         width: 7rem;
+				.amount {
+          font-size: 14px;
+        }
+				.smallW {
+					display: block;
+					
+				}
+				.bigW{
+					display: none;
+				}
       }
       .amount {
         margin: 0 auto;
         font-size: 1rem;
       }
-      .buy,
-      .sell {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.4rem 0.75rem;
-        border-radius: 0.5rem;
-        color: #ffffff;
-        cursor: pointer;
-      }
+			.bigW {
+				button {
+					font-size: 16px;
+				}
+			}
 			.smallW {
 				display: none;
+				button {
+					padding: 0.1rem 0.5rem;
+				}
 			}
-      .buy {
-        background-color: $Green;
-      }
-      .sell {
-        background-color: $Red;
-      }
       @media (max-width: 1250px) {
-        .buy,
-        .sell {
-          padding: 0.3rem 0.5rem;
-          font-size: 15px;
-        }
         .amount {
           font-size: 14px;
         }
 				.smallW {
 					display: block;
+					button {
+						font-size: 14px;
+
+					}
 				}
 				.bigW{
 					display: none;

@@ -5,16 +5,16 @@ import BankCard from "./component";
 const BankCardContainer = () => {
 	const cardNumber = useSelector((state) => state.balance.cardNumber);
 	
-	const [isChangeCard, setIsChangeCard] = useState(true)
+	const [isDeposit, setIsDeposit] = useState(true)
 
-	const onChangeCard = () => {
-		setIsChangeCard(false)
+	const onOpen = () => {
+		setIsDeposit(false)
 	}
-	const onSaveNewCard = () => {
-		setIsChangeCard(true)
+	const onClose = () => {
+		setIsDeposit(true)
 	}
 
 
-	return <BankCard cardNumber={cardNumber} isChangeCard={isChangeCard} onChangeCard={onChangeCard} onSaveNewCard={onSaveNewCard}/>;
+	return <BankCard cardNumber={cardNumber} isDeposit={isDeposit} onOpen={onOpen} onClose={onClose}/>;
 };
 export const container = BankCardContainer;

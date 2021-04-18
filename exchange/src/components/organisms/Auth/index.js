@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 
 import BlockHeader from "../../moleculs/BlockHeader";
+import Button from "../../atoms/Button";
 
 const Auth = () => {
   return (
@@ -18,9 +19,7 @@ const Auth = () => {
 					<span className={styles.check}></span>
           <span className={styles.remember}>remember me</span>
         </label>
-        <div className={styles.button}>
-          <button>Login</button>
-        </div>
+				<Button text={"login"}/>
       </form>
     </div>
   );

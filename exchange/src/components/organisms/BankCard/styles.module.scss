@@ -1,12 +1,18 @@
 @import "../../../assets/styles/styles.scss";
 .cardNumber {
   font-size: 20px;
-	margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
   div {
     font-size: 16px;
     margin: 0.25rem 0 0 0;
     color: #d3d3d3;
   }
+}
+.deposit {
+  margin: 0 0 2rem 0;
+	.button{
+		margin: 0 0 1rem 0;
+	}
 }
 .changeCard {
   background-color: #ffffff;
@@ -14,7 +20,7 @@
     0px 0px 1px rgba(0, 0, 0, 0.04);
   border-radius: 1.25rem;
   padding: 1rem;
-	position: relative;
+  position: relative;
   input {
     border: 2px solid $Green;
     padding: 0.1rem 0.5rem;
@@ -34,9 +40,9 @@
 }
 .number {
   margin: 0 0 1rem 0;
-	color: #d3d3d3;
-	font-size: 16px;
-	//padding: 0.5rem 0 0 0;
+  color: #d3d3d3;
+  font-size: 16px;
+  //padding: 0.5rem 0 0 0;
   .img {
     display: flex;
     align-items: center;
@@ -54,8 +60,8 @@
   }
 }
 .validity {
-	font-size: 16px;
-	color: #d3d3d3;
+  font-size: 16px;
+  color: #d3d3d3;
   margin: 0 0 1rem 0;
   div {
     margin: 0 0 0.3rem 0;
@@ -73,8 +79,8 @@
   }
 }
 .cvv {
-	font-size: 16px;
-	color: #d3d3d3;
+  font-size: 16px;
+  color: #d3d3d3;
   margin: 0 0 1rem 0;
   div {
     margin: 0 0 0.3rem 0;
@@ -84,11 +90,4 @@
     text-align: center;
   }
 }
-.button {
-  text-align: center;
-  color: #ffffff;
-  border-radius: 0.5rem;
-  font-size: 15px;
-  padding: 0.15rem 0.5rem;
-  background-color: $Green;
-}
+

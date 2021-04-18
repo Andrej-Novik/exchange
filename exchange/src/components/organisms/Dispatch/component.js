@@ -2,6 +2,7 @@ import Person from "../../moleculs/Person";
 import BlockHeader from "../../moleculs/BlockHeader";
 import styles from "./styles.module.scss";
 import AddNewUserModal from "../AddNewUserModal";
+import Button from "../../atoms/Button";
 
 const Dispatch = ({ people, isOpen, onOpen, onClose }) => {
   return (
@@ -17,7 +18,7 @@ const Dispatch = ({ people, isOpen, onOpen, onClose }) => {
       </div>
       <form className={styles.send}>
         <input className={styles.amount} type="text" placeholder="0" />
-        <button className={styles.button}>Send the transfer</button>
+				<Button text={ "Send the transfer"}/>
       </form>
       <AddNewUserModal isOpen={isOpen} onClose={onClose} />
     </div>

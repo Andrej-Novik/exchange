@@ -1,3 +1,4 @@
+import Button from "../../atoms/Button";
 import styles from "./styles.module.scss";
 
 const BuyCoin = ({ coin, buttons, onOpen }) => {
@@ -17,18 +18,26 @@ const BuyCoin = ({ coin, buttons, onOpen }) => {
             className={styles.sell}
             onClick={() => onOpen(buttons[0].id, coin.id)}
           >
-            <div className={styles.bigW}>{buttons[0].text.big}</div>
-            <div className={styles.smallW}>{buttons[0].text.small}</div>
+            <div className={styles.bigW}>
+              <Button text={buttons[0].text.big} isRed={true} />
+            </div>
+            <div className={styles.smallW}>
+              <Button text={buttons[0].text.small} isRed={true} />
+            </div>
           </div>
 
           <div className={styles.amount}>{coin.amount}</div>
 
-					<div
-						className={styles.buy}
-						onClick={() => onOpen(buttons[1].id, coin.id)}
-					>
-            <div className={styles.bigW}>{buttons[1].text.big}</div>
-            <div className={styles.smallW}>{buttons[1].text.small}</div>
+          <div
+            className={styles.buy}
+            onClick={() => onOpen(buttons[1].id, coin.id)}
+          >
+            <div className={styles.bigW}>
+              <Button text={buttons[1].text.big} />
+            </div>
+            <div className={styles.smallW}>
+              <Button text={buttons[1].text.small} />
+            </div>
           </div>
         </div>
 

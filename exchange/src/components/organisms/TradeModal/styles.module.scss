@@ -47,22 +47,20 @@
       font-size: 1rem;
       margin: 0 0 1rem 0;
       -moz-appearance: textfield;
-			&::-webkit-outer-spin-button,
+      &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
-         display: none;
+        display: none;
         -webkit-appearance: none;
-        margin: 0; 
+        margin: 0;
       }
     }
     .buy,
     .sell {
-      cursor: pointer;
       text-align: center;
       color: #ffffff;
-      border-radius: 0.25rem;
-      font-size: 14px;
-      padding: 0.3rem 0;
-      width: 5rem;
+      border-radius: 0.35rem;
+      font-size: 16px;
+      padding: 0.2rem 0.5rem;
       &:disabled {
         opacity: 0.5;
       }
