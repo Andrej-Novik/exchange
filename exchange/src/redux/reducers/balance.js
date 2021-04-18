@@ -1,7 +1,7 @@
 import { ADD_MONEY, LOSE_MONEY } from "../actionTypes/balance";
 
 const initialState = {
-  current: 10000,
+  current: 100000,
   income: 600,
   outcome: 300,
 };

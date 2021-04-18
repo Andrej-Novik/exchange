@@ -2,6 +2,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import Home from "../../pages/Home";
 import CoinsPage from "../../pages/CoinsPage";
 import HistoryPage from "../../pages/HistoryPage";
+import AuthPage from "../../pages/AuthPage";
 import styles from "./style.module.scss";
 
 const Content = () => {
@@ -9,6 +10,7 @@ const Content = () => {
     <div className={styles.content}>
       <Switch>
 				<Route exact path="/" render={() => <Redirect to={"/home"} />} />
+				<Route path="/login" render={() => <AuthPage />} />
 				<Route path="/home" render={() => <Home />} />
         <Route path="/trade" render={() => <CoinsPage />} />
 				<Route path="/history" render={() => <HistoryPage />} />
