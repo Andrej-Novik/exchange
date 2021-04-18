@@ -3,7 +3,8 @@ import { ADD_MONEY, LOSE_MONEY } from "../actionTypes/balance";
 const initialState = {
   current: 100000,
   income: 600,
-  outcome: 300,
+	outcome: 300,
+	cardNumber: "1234 **** **** 5678"
 };
 
 const balance = (state = initialState, action) => {

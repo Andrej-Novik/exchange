@@ -13,11 +13,11 @@ const Balance = ({
         <p className="text">Current balance</p>
       </div>
       <div className={styles.income}>
-        <span>$ {incomeBalance.toFixed(1)}</span>
+        <span>{incomeBalance.toFixed(1)}</span>
         <p className="text">Income</p>
       </div>
       <div className={styles.outcome}>
-        <span>$ {outcomeBalance.toFixed(1)}</span>
+        <span>{outcomeBalance.toFixed(1)}</span>
         <p className="text">Outcome</p>
       </div>
     </div>
