@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Home from "../../pages/Home";
 import CoinsPage from "../../pages/CoinsPage";
 import HistoryPage from "../../pages/HistoryPage";
@@ -8,9 +8,11 @@ const Content = () => {
   return (
     <div className={styles.content}>
       <Switch>
-				<Route path="/" exact render={() => <Home />} />
-				<Route path="/trade" exact render={() => <CoinsPage />} />
-				<Route path="/history" exact render={() => <HistoryPage />} />
+				<Route exact path="/" render={() => <Redirect to={"/home"} />} />
+				<Route path="/home" render={() => <Home />} />
+        <Route path="/trade" render={() => <CoinsPage />} />
+				<Route path="/history" render={() => <HistoryPage />} />
+				<Route path="*" render={() => <div>404 NOT FOUND</div>} />
       </Switch>
     </div>
   );

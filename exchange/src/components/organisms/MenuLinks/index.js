@@ -1,27 +1,27 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./style.module.scss";
 
 const MenuLinks = () => {
   return (
-    <nav className={styles.menuLinks}>
-      <Link to="" className={styles.menuLink}>
+		<nav className={styles.menuLinks}>
+      <NavLink to="/home" className={styles.menuLink} activeClassName={styles.activeLink}>
         Home
-      </Link>
-      <Link to="trade" className={styles.menuLink}>
+      </NavLink>
+      <NavLink to="/trade" className={styles.menuLink} activeClassName={styles.activeLink}>
         Trade
-      </Link>
-      <Link to="wallet" className={styles.menuLink}>
+      </NavLink>
+      <NavLink to="/wallet" className={styles.menuLink} activeClassName={styles.activeLink}>
         Wallet
-      </Link>
-      <Link to="history" className={styles.menuLink}>
+      </NavLink>
+      <NavLink to="/history" className={styles.menuLink} activeClassName={styles.activeLink}>
         History
-      </Link>
-      <Link to="profile" className={styles.menuLink}>
+      </NavLink>
+      <NavLink to="/profile" className={styles.menuLink} activeClassName={styles.activeLink}>
         Profile
-      </Link>
-      <Link to="settings" className={styles.menuLink}>
+      </NavLink>
+      <NavLink to="/settings" className={styles.menuLink} activeClassName={styles.activeLink}>
         Settings
-      </Link>
+      </NavLink>
     </nav>
   );
 };
