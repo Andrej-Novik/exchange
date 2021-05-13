@@ -10,7 +10,7 @@ const History = ({ transactions, transactionsAmount, header }) => {
 				path={"/history"}
 				title={"Last transactions"}
 			/>)}
-      {transactions.slice(0, transactionsAmount).map((transaction) => {
+      {transactions.slice(0, transactionsAmount).reverse().map((transaction) => {
         return <Transaction transaction={transaction} key={transaction.id} />;
       })}
     </div>

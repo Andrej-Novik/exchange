@@ -16,10 +16,17 @@ const Dispatch = ({ people, isOpen, onOpen, onClose }) => {
           +
         </div>
       </div>
-      <form className={styles.send}>
-        <input className={styles.amount} type="text" placeholder="0" />
+      <div className={styles.send}>
+				<input className={styles.amount} type="text" placeholder="0" />
+				<select className={styles.type}>
+					<option>BTC</option>
+					<option>ETH</option>
+					<option>LIT</option>
+					<option>BCH</option>
+					<option>XRP</option>
+				</select>
 				<Button text={ "Send the transfer"}/>
-      </form>
+      </div>
       <AddNewUserModal isOpen={isOpen} onClose={onClose} />
     </div>
   );

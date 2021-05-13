@@ -1,14 +1,12 @@
 import {
-  OPEN_MODAL_SELL,
-  OPEN_MODAL_BUY,
+  OPEN_TRADE_MODAL,
   CLOSE_MODAL,
   BUY_COINS,
   SELL_COINS,
 } from "../actionTypes/coins";
 
-export const openModal = (buttonId, coinId) => {
-  if (buttonId === 1) return { type: OPEN_MODAL_SELL, coinId };
-  else return { type: OPEN_MODAL_BUY, coinId };
+export const openModal = ( coinId, buttonType) => {
+  return { type: OPEN_TRADE_MODAL, coinId, buttonType };
 };
 export const closeModal = () => {
   return { type: CLOSE_MODAL };

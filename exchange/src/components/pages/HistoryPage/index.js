@@ -15,7 +15,6 @@ const HistoryPage = () => {
       <div className={styles.column}>
 				<Coins />
 				<Statistics />
-				<Dispatch />
       </div>
     </div>
   );

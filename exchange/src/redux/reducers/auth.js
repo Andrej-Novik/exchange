@@ -1,4 +1,4 @@
-import ava from "../../assets/images/headerIcons/authUser/1.webp"
+import ava from "../../assets/images/headerIcons/authUser/1.jpg"
 
 const initialState = {
 	user: {

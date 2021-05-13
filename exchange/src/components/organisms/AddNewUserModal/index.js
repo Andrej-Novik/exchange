@@ -9,7 +9,7 @@ const AddNewUserModal = ({ isOpen, onClose }) => {
           <span className={styles.close} onClick={onClose}></span>
           <input type="file" className={styles.file} />
           <input type="text" placeholder="name" className={styles.name} />
-					<Button text={"Add"}/>
+					<Button text={"add"}/>
         </form>
       </div>
     )

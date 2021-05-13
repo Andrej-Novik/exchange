@@ -4,17 +4,29 @@ import styles from "./styles.module.scss";
 const TradeModal = ({
   isOpen,
   isBuy,
-  enteredAmount,
   chosenCoin,
   currentBalance,
   onClose,
   onTrade,
 }) => {
-  let [newEnteredAmount, setNewEnteredAmount] = useState(enteredAmount);
+  let [newEnteredAmount, setNewEnteredAmount] = useState("");
 
   useEffect(() => {
-    setNewEnteredAmount(enteredAmount);
-  }, [enteredAmount]);
+    setNewEnteredAmount();
+  }, []);
+
+  const Trade = () => {
+    setNewEnteredAmount("");
+    onTrade(
+      newEnteredAmount,
+      chosenCoin.id,
+      chosenCoin.price,
+      isBuy,
+      chosenCoin.name,
+      chosenCoin.abbreviation,
+      chosenCoin.img
+    );
+  };
 
   return (
     isOpen && (
@@ -34,23 +46,13 @@ const TradeModal = ({
             <div>
               <button
                 disabled={
-                  newEnteredAmount === enteredAmount ||
+                  !newEnteredAmount ||
                   newEnteredAmount * chosenCoin.price > currentBalance ||
                   newEnteredAmount < 0.001 ||
                   newEnteredAmount > 1000
                 }
                 className={styles.buy}
-                onClick={() =>
-                  onTrade(
-                    newEnteredAmount,
-                    chosenCoin.id,
-                    chosenCoin.price,
-                    isBuy,
-                    chosenCoin.name,
-                    chosenCoin.abbreviation,
-                    chosenCoin.img
-                  )
-                }
+                onClick={Trade}
               >
                 buy
               </button>
@@ -59,23 +61,13 @@ const TradeModal = ({
             <div>
               <button
                 disabled={
-                  newEnteredAmount === enteredAmount ||
+                  !newEnteredAmount ||
                   newEnteredAmount > chosenCoin.amount ||
                   newEnteredAmount < 0.001 ||
                   newEnteredAmount > 1000
                 }
                 className={styles.sell}
-                onClick={() =>
-                  onTrade(
-                    newEnteredAmount,
-                    chosenCoin.id,
-                    chosenCoin.price,
-                    isBuy,
-                    chosenCoin.name,
-                    chosenCoin.abbreviation,
-                    chosenCoin.img
-                  )
-                }
+                onClick={Trade}
               >
                 sell
               </button>

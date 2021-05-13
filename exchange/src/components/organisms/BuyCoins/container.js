@@ -7,8 +7,8 @@ const BuyCoinsContainer = () => {
   const coins = useSelector((state) => state.coins.coins);
   const buttons = useSelector((state) => state.coins.buttons);
 
-	const onOpen = (buttonId, coinId) => {
-    dispatch(openModal(buttonId, coinId));
+  const onOpen = (coinId, buttonType) => {
+    dispatch(openModal(coinId, buttonType));
   };
   return <BuyCoins coins={coins} buttons={buttons} onOpen={onOpen} />;
 };

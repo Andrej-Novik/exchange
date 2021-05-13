@@ -16,7 +16,7 @@ const BuyCoin = ({ coin, buttons, onOpen }) => {
         <div className={styles.action}>
           <div
             className={styles.sell}
-            onClick={() => onOpen(buttons[0].id, coin.id)}
+            onClick={() => onOpen(coin.id, buttons[0].buy)}
           >
             <div className={styles.bigW}>
               <Button text={buttons[0].text.big} isRed={true} />
@@ -30,7 +30,7 @@ const BuyCoin = ({ coin, buttons, onOpen }) => {
 
           <div
             className={styles.buy}
-            onClick={() => onOpen(buttons[1].id, coin.id)}
+            onClick={() => onOpen(coin.id, buttons[1].buy)}
           >
             <div className={styles.bigW}>
               <Button text={buttons[1].text.big} />

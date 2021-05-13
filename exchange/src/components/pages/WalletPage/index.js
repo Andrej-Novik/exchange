@@ -14,8 +14,6 @@ const WalletPage = () => {
       </div>
       <div className={styles.column}>
         <Coins />
-        <Statistics />
-        <Dispatch />
       </div>
     </div>
   );

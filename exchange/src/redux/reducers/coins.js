@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import {
-  OPEN_MODAL_SELL,
-  OPEN_MODAL_BUY,
+  OPEN_TRADE_MODAL,
   CLOSE_MODAL,
   BUY_COINS,
   SELL_COINS,
@@ -14,23 +13,22 @@ import bitcoinCash from "../../assets/images/coinsIcons/bch.jpg";
 
 const initialState = {
   isBuyModalOpen: false,
-  enteredAmount: "",
   chosenCoin: {},
   isBuy: true,
   buttons: [
     {
-      id: 1,
       text: {
         big: "sell",
         small: "-",
       },
+      buy: false,
     },
     {
-      id: 2,
       text: {
         big: "buy",
         small: "+",
       },
+      buy: true,
     },
   ],
   coins: [
@@ -84,27 +82,19 @@ const initialState = {
 
 const balance = (state = initialState, action) => {
   switch (action.type) {
-    case OPEN_MODAL_BUY: {
+    case OPEN_TRADE_MODAL: {
       return {
         ...state,
         chosenCoin: state.coins.find((coin) => coin.id === action.coinId),
         isBuyModalOpen: true,
-        isBuy: true,
-      };
-    }
-    case OPEN_MODAL_SELL: {
-      return {
-        ...state,
-        chosenCoin: state.coins.find((coin) => coin.id === action.coinId),
-        isBuyModalOpen: true,
-        isBuy: false,
+        isBuy: action.buttonType,
       };
     }
     case CLOSE_MODAL: {
       return {
         ...state,
         isBuyModalOpen: false,
-        enteredAmount: "",
+
         chosenCoin: {},
       };
     }
@@ -120,7 +110,7 @@ const balance = (state = initialState, action) => {
             : coin
         ),
         isBuyModalOpen: false,
-        enteredAmount: "",
+
         chosenCoin: {},
       };
     }
@@ -136,7 +126,7 @@ const balance = (state = initialState, action) => {
             : coin
         ),
         isBuyModalOpen: false,
-        enteredAmount: "",
+
         chosenCoin: {},
       };
     }
