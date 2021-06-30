@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 1530px;
+  margin: 0 auto;
+  .page {
+    margin: 0 auto;
+    flex: 1 1 auto;
+    display: flex;
+    background-color: #ffffff;
+    .main {
+      flex: 1 1 auto;
+      padding: 2rem 2rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+}
