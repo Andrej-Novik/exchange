@@ -69,7 +69,7 @@ const initialState = {
       name: "Ripple",
       abbreviation: "XRP",
       amount: 90000,
-      price: 0.31,
+      price: 0.38,
       percent: 10.28,
       img: ripple,
     },

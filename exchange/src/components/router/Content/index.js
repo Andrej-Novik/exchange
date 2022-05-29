@@ -11,7 +11,7 @@ const Content = () => {
   return (
     <div className={styles.content}>
       <Switch>
-				<Route exact path="/" render={() => <Redirect to={"/home"} />} />
+				<Route exact path="/" render={() => <Redirect to={"/login"} />} />
 				<Route path="/login" render={() => <AuthPage />} />
 				<Route path="/home" render={() => <Home />} />
         <Route path="/trade" render={() => <CoinsPage />} />

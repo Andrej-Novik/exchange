@@ -12,13 +12,13 @@ import {
 const CoinsContainer = ({ coinsAmount, header, padding }) => {
   const dispatch = useDispatch();
   useEffect(() => {
-    setInterval(() => {
+    //setInterval(() => {
       dispatch(getBtcPriceAPI());
       dispatch(getEthPriceAPI());
       dispatch(getLtcPriceAPI());
       dispatch(getBchPriceAPI());
       //dispatch(getXrpPriceAPI());
-    }, 5000);
+    //}, 5000);
   }, []);
   const coins = useSelector((state) => state.coins.coins);
 
