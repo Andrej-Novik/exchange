@@ -1,4 +1,9 @@
-export const OPEN_TRADE_MODAL = "OPEN_TRADE_MODAL"
-export const CLOSE_MODAL = "CLOSE_MODAL"
-export const BUY_COINS = 'BUY_COINS'
-export const SELL_COINS = 'SELL_COINS'
+export const OPEN_TRADE_MODAL = "OPEN_TRADE_MODAL";
+export const CLOSE_MODAL = "CLOSE_MODAL";
+export const BUY_COINS = "BUY_COINS";
+export const SELL_COINS = "SELL_COINS";
+export const SET_BTC = "SET_BTC";
+export const SET_ETH = "SET_ETH";
+export const SET_LTC = "SET_LTC";
+export const SET_XRP = 'SET_XRP'
+export const SET_BCH = 'SET_BCH'

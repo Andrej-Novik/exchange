@@ -4,6 +4,11 @@ import {
   CLOSE_MODAL,
   BUY_COINS,
   SELL_COINS,
+  SET_BTC,
+  SET_ETH,
+  SET_LTC,
+  SET_XRP,
+  SET_BCH,
 } from "../actionTypes/coins";
 import bitcoin from "../../assets/images/coinsIcons/btc.png";
 import ethereum from "../../assets/images/coinsIcons/eth.png";
@@ -37,7 +42,7 @@ const initialState = {
       name: "Bitcoin",
       abbreviation: "BTC",
       amount: 20,
-      price: 52000.33,
+      price: null,
       percent: 9.88,
       img: bitcoin,
     },
@@ -46,7 +51,7 @@ const initialState = {
       name: "Ethereum",
       abbreviation: "ETH",
       amount: 2,
-      price: 1500.0,
+      price: null,
       percent: 7.48,
       img: ethereum,
     },
@@ -55,7 +60,7 @@ const initialState = {
       name: "Litecoin",
       abbreviation: "LIT",
       amount: 8,
-      price: 178.57,
+      price: null,
       percent: 5.46,
       img: litecoin,
     },
@@ -64,7 +69,7 @@ const initialState = {
       name: "Ripple",
       abbreviation: "XRP",
       amount: 90000,
-      price: 0.53,
+      price: 0.31,
       percent: 10.28,
       img: ripple,
     },
@@ -73,7 +78,7 @@ const initialState = {
       name: "Bitcoin Cash",
       abbreviation: "BCH",
       amount: 4,
-      price: 670.39,
+      price: null,
       percent: 4.87,
       img: bitcoinCash,
     },
@@ -128,6 +133,71 @@ const balance = (state = initialState, action) => {
         isBuyModalOpen: false,
 
         chosenCoin: {},
+      };
+    }
+    case SET_BTC: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.name === "Bitcoin"
+            ? {
+                ...coin,
+                price: action.price,
+              }
+            : coin
+        ),
+      };
+    }
+    case SET_ETH: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.name === "Ethereum"
+            ? {
+                ...coin,
+                price: action.price,
+              }
+            : coin
+        ),
+      };
+    }
+    case SET_LTC: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.name === "Litecoin"
+            ? {
+                ...coin,
+                price: action.price,
+              }
+            : coin
+        ),
+      };
+    }
+    case SET_XRP: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.name === "Ripple"
+            ? {
+                ...coin,
+                price: action.price,
+              }
+            : coin
+        ),
+      };
+    }
+    case SET_BCH: {
+      return {
+        ...state,
+        coins: state.coins.map((coin) =>
+          coin.name === "Bitcoin Cash"
+            ? {
+                ...coin,
+                price: action.price,
+              }
+            : coin
+        ),
       };
     }
     default:
